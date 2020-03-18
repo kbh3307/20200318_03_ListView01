@@ -44,8 +44,6 @@ public class MainActivity extends BaseActivity {
 //        리스트뷰와 어댑터 연결
         binding.storeListView.setAdapter(storeAdapter);
 
-        addStore();
-
     }
 
     void addStore(){
