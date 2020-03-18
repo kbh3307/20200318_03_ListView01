@@ -3,6 +3,7 @@ package kr.co.tjoeun.a20200318_03_listview01;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class MainActivity extends BaseActivity {
         setupEvents();
         setValues();
         addStore();
+
     }
 
     @Override
@@ -42,10 +44,15 @@ public class MainActivity extends BaseActivity {
 //        리스트뷰와 어댑터 연결
         binding.storeListView.setAdapter(storeAdapter);
 
+        addStore();
+
     }
 
     void addStore(){
         storeDatas.add(new Store("삼겹더하기 본점",4));
         storeDatas.add(new Store("밥해주는 남자",3));
+        storeAdapter.notifyDataSetChanged();
     }
+
+
 }
